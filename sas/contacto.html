@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contacto - Eco Plástica Internacional S.A.S</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+   /* HEADER Y LOGO */
+  header {
+    position: relative;
+    background: #fff;
+    border-bottom: 4px solid #000;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  header img.logo {
+    height: 70px;
+  }
+
+  /* NAVBAR */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+
+  nav ul li a:hover {
+    color: #007b55;
+  }
+
+  .btn-especial {
+    background: #007b55;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .menu-toggle {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+  .contacto-container {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 90vh;
+  }
+  .contacto-info {
+    background: #1c2b32;
+    color: #fff;
+    flex: 1;
+    padding: 40px;
+  }
+  .contacto-info h2 {
+    color: #a5d6a7;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  .contacto-info h1 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  .contacto-info p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  .contacto-info strong {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+  }
+  .contacto-info a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 15px;
+  }
+  .contacto-info address {
+    font-style: normal;
+    margin-top: 10px;
+  }
+  .contacto-form {
+    background: #fff;
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .contacto-form input,
+  .contacto-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  .contacto-form textarea {
+    resize: none;
+    height: 120px;
+  }
+  .contacto-form button {
+    background: #28a745;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  .contacto-form button:hover {
+    background: #218838;
+  }
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+    nav ul {
+      display: none;
+      flex-direction: column;
+      background: #fff;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      border-top: 2px solid #000;
+      padding: 15px;
+    }
+    nav ul.active {
+      display: flex;
+    }
+    .contacto-container {
+      flex-direction: column;
+    }
+  }
+ 
+
+/* =========================
+   RESPONSIVE / MOBILE CSS
+========================= */
+
+/* Para pantallas medianas (<1024px) */
+@media (max-width: 1024px) {
+  .section2 {
+    grid-template-columns: 1fr;
+  }
+  .vision-contenido {
+    grid-template-columns: 1fr;
+  }
+  .productos {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Para pantallas pequeñas (<768px) */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  .btn-especial {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .section, .section2, .vision, .parte-verde {
+    padding: 10px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .section img, .vision img, .productos img, .imagen-verde img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Para pantallas muy pequeñas (<480px) */
+@media (max-width: 480px) {
+  .section h1, .vision h1, .section2 h1 {
+    font-size: 1.5rem;
+  }
+
+  .section h2, .vision h2, .section2 h2 {
+    font-size: 0.9rem;
+  }
+
+  .contenido-verde h1 {
+    font-size: 1.4rem;
+  }
+
+  .contenido-verde h2 {
+    font-size: 1.2rem;
+  }
+
+  nav ul li a, .btn-especial {
+    font-size: 0.9rem;
+  }
+}
+
+</style>
+</head>
+<body>
+<!-- HEADER CON LOGO Y NAV -->
+<header>
+  <img src="logooo.jpg" alt="Logo EPISA" class="logo"> <!-- Convierte el PDF a imagen logo.png -->
+  <nav>
+    <span class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('active')">☰</span>
+    <ul>
+      <li><a href="inicio.html">INICIO</a></li>
+      <li><a href="EMPRESA.html">EMPRESA</a></li>
+      <li><a href="ubicacion.html">UBICACIÓN</a></li>
+      <li><a href="NEGOCIOS.html">NEGOCIOS</a></li>
+      <li><a href="IMPACTO.html">IMPACTO</a></li>
+      <li><a href="beneficios.html">BENEFICIOS</a></li>
+      <li><a href="contacto.html">CONTACTO</a></li>
+     
+    </ul>
+    <a href="INFORMACION ESPECIAL.html" class="btn-especial">INFORMACIÓN ESPECIAL</a>
+  </nav>
+</header>
+
+<div class="contacto-container">
+  <div class="contacto-info">
+    <h2>Ponerse en contacto</h2>
+    <h1>No dude en ponerse en contacto con nosotros.</h1>
+    <p>Nuestro equipo se pondrá en contacto para responder a su mensaje.</p>
+    <strong>Envíenos un mensaje 📲</strong>
+    <a href="mailto:moyalulu64@gmail.com">moyalulu64@gmail.com</a>
+    <strong>Sede de la empresa 📍</strong>
+    <address>
+      Luis Franzini 884 escritorio 102<br>
+      Montevideo, Uruguay
+    </address>
+  </div>
+  <div class="contacto-form">
+    <h2 style="margin-bottom: 10px;">Formulario de contacto</h2>
+    <form action="https://formspree.io/f/mldplyao" method="POST">
+      <label>Tu correo electrónico:
+        <input type="email" name="email" required>
+      </label>
+      <label>Tu mensaje:
+        <textarea name="mensaje" required></textarea>
+      </label>
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+</div>
+</body>
+</html>
